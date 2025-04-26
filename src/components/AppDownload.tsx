@@ -11,7 +11,7 @@ export const AppDownload = () => {
               <div className="relative w-full max-w-[300px] mx-auto">
                 <div className="border-[3px] border-black rounded-[40px] p-3 overflow-hidden">
                   <img
-                    src="public/assets/Group 1000007108.png"
+                    src="src/assets/Group 1000007108.png"
                     alt="BHIVE Workspace App"
                     className="w-full h-auto rounded-[32px]"
                   />
