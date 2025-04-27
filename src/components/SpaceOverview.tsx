@@ -2,18 +2,34 @@
 import { Card } from "@/components/ui/card";
 import { useAppSelector } from "@/store/hooks";
 import type { RootState } from "@/store/store";
+import platinumIndiranagarImg from '../static_assets/5934c0fd9d574bddbde8175d86a2d2da.jpg';
+
+import jbrWhitefieldImg from '../static_assets/e2d0405175f74b5c815658a8ef5ef4b8.jpg';
+import hsrSilkboardImg from '../static_assets/0a74575ca6004b4bb20dcd131afc5849.jpg';
+import hsrCampusImg from '../static_assets/0dfe4977f25940aa9d32507d4a233c9c.jpg';
+import hsr27thMainImg from '../static_assets/4d85410baa074351aa948fc2c5da50d9.jpg';
+
 
 export const SpaceOverview = () => {
   const workspaces = useAppSelector((state: RootState) => state.data.workspaces);
-
+console.log(workspaces)
+const locationImages = {
+  "Platinum, Indiranagar": platinumIndiranagarImg,
+  "JBR Campus, Whitefield": jbrWhitefieldImg,
+  "HSR Sector 6 Service Road, Silkboard": hsrSilkboardImg,
+  "HSR Campus": hsrCampusImg,
+  "27th Main, HSR": hsr27thMainImg,
+};
   const spaces = workspaces.map(workspace => ({
     id: workspace.id,
     name: workspace.name,
-    image: workspace.images[0] || "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80",
+    image: locationImages[workspace.name],
     dayPass: workspace.day_pass_price,
     bulkPass: workspace.day_pass_price * 10 * 0.8, // 20% discount for bulk
     distance: "6 Kms" // This should be calculated based on user location
   }));
+
+
 
   return (
     <div className="py-16 container mx-auto px-4">
