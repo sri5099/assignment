@@ -1,5 +1,6 @@
 
 import { Card } from "@/components/ui/card";
+import image1 from "../assets/Group1000007108.png"
 
 export const AppDownload = () => {
   return (
@@ -11,7 +12,7 @@ export const AppDownload = () => {
               <div className="relative w-full max-w-[300px] mx-auto">
                 <div className="border-[3px] border-black rounded-[40px] p-3 overflow-hidden">
                   <img
-                    src="src/assets/Group1000007108.png"
+                    src={image1}
                     alt="BHIVE Workspace App"
                     className="w-full h-auto rounded-[32px]"
                   />
