@@ -1,10 +1,12 @@
 
 import { Card } from "@/components/ui/card";
+import image1 from "../assets/image54.png"
+import image2 from "../assets/Group1000007108.png"
 
 export const Hero = () => {
   return (
     <><div className="flex items-center justify-between mb-4">
-      <img src="src/assets/image54.png" alt="Office Illustration" className="w-auto h-auto ml-4 mt-4" />
+      <img src={image1} alt="Office Illustration" className="w-auto h-auto ml-4 mt-4" />
       <div className="flex items-center border-2 border-[#FFB800] rounded-full px-4 py-2 mr-6">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#FFB800] " viewBox="0 0 24 24" fill="none" stroke="#F2B304" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -25,7 +27,7 @@ export const Hero = () => {
           <div className="flex-1">
             <Card className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 border-none">
               <img
-                src="src/assets/Group1000007108.png"
+                src={image2}
                 alt="Office Illustration"
                 className="w-full h-auto" />
             </Card>
